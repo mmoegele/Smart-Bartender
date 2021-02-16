@@ -1,32 +1,38 @@
 {
-	"pump_1": {
-		"name": "Pump 1",
-		"pin": 17, 
-		"value": "gin"
-	},
-	"pump_2": {
-		"name": "Pump 2",
-		"pin": 27, 
-		"value": "tonic"
-	},
-	"pump_3": {
-		"name": "Pump 3",
-		"pin": 22, 
-		"value": null
-	},
-	"pump_4": {
-		"name": "Pump 4",
-		"pin": 23, 
-		"value": null
-	},
-	"pump_5": {
-		"name": "Pump 5",
-		"pin": 24, 
-		"value": null
-	},
-	"pump_6": {
-		"name": "Pump 6",
-		"pin": 25, 
-		"value": null
-	}
+    "pump_1": {
+        "name": "Pump 1",
+        "pin": 17,
+        "value": "vo",
+        "mlpersec" : "1.95"
+    },
+    "pump_2": {
+        "name": "Pump 2",
+        "pin": 27,
+        "value": "os",
+        "mlpersec" : "3.3"
+    },
+    "pump_3": {
+        "name": "Pump 3",
+        "pin": 22,
+        "value": "w",
+        "mlpersec" : "2.75"
+    },
+    "pump_4": {
+        "name": "Pump 4",
+        "pin": 23,
+        "value": "as",
+        "mlpersec" : "2.8"
+    },
+    "pump_5": {
+        "name": "Pump 5",
+        "pin": 24,
+        "value": "hc",
+        "mlpersec" : "1.65"
+    },
+    "pump_6": {
+        "name": "Pump 6",
+        "pin": 25,
+        "value": "co",
+        "mlpersec" : "2.1"
+    }
 }

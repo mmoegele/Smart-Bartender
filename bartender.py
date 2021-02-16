@@ -8,7 +8,7 @@ import json
 import threading
 import traceback
 
-from dotstar import Adafruit_DotStar
+from strandtest import *
 from menu import MenuItem, Menu, Back, MenuContext, MenuDelegate
 from drinks import drink_list, drink_options
 
@@ -30,8 +30,6 @@ NUMBER_NEOPIXELS = 45
 NEOPIXEL_DATA_PIN = 26
 NEOPIXEL_CLOCK_PIN = 6
 NEOPIXEL_BRIGHTNESS = 64
-
-FLOW_RATE = 60.0/100.0
 
 class Bartender(MenuDelegate): 
 	def __init__(self):
@@ -292,7 +290,7 @@ class Bartender(MenuDelegate):
 		for ing in ingredients.keys():
 			for pump in self.pump_configuration.keys():
 				if ing == self.pump_configuration[pump]["value"]:
-					waitTime = ingredients[ing] * FLOW_RATE
+					waitTime = ingredients[ing] / self.pump_configuration[pump]["mlpersec"]
 					if (waitTime > maxTime):
 						maxTime = waitTime
 					pump_t = threading.Thread(target=self.pour, args=(self.pump_configuration[pump]["pin"], waitTime))
